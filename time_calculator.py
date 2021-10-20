@@ -45,10 +45,7 @@ def add_time(start, duration, dow=""):
   if final_hours != 12:
     days_added = day_add_count
   
-  # ays_added_str = str(days_added)
   days_added_str = str(int(round(days_added, 0)))
-  # print(days_added_str)
-  # days_added_str = re.split('.', str(days_added_str))
   
   if dow:
     for index, value in enumerate(dow_lst):
@@ -59,8 +56,6 @@ def add_time(start, duration, dow=""):
           day_add_count += index
         while day_add_count > 7:
           day_add_count -= 7
-        # day_add_count = str(day_add_count)
-        # day_add_count = day_add_count[0]
         if day_add_count == 7:
           day_add_count = 0
         if day_add_count % 1 != 0:
